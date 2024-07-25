@@ -5,10 +5,10 @@ const multer  = require('multer')
 const docxConverter = require('docx-pdf');
 const path=require("path"); //for aquiring path for input
 
-const port = 3000
+const PORT=3000;
 app.use(cors());
 app.get('/', (req, res) => {
-  // res.send('Hello Amresh!')
+  res.send('Hello Amresh!')
 })
 
 //setting up the file storage using multer
@@ -53,6 +53,6 @@ app.post('/convertFile', upload.single("file"), (req, res, next)=> {
      }
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`)
 })
